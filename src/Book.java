@@ -61,4 +61,27 @@ public class Book {
         this.author = author;
     }
 
+    public void getBook(String serialNUmb, String bookTitle, String author) {
+        this.serialNUmb = serialNUmb;
+        this.bookTitle = bookTitle;
+        this.author = author;
+        this.dateTime = LocalDateTime.now();
+    }
+
+    void setBook(String serialNUmb, String bookTitle, String author) {
+        this.serialNUmb = serialNUmb;
+        this.bookTitle = bookTitle;
+        this.author = author;
+        this.dateTime = LocalDateTime.now();
+    }
+
+    @Override
+    public String toString() {
+        return "Book{ " +
+                " dateTime=" + dateTime +
+                ", serialNUmb='" + serialNUmb + '\'' +
+                ", bookTitle='" + bookTitle + '\'' +
+                ", author='" + author + '\'' +
+                '}';
+    }
 }
