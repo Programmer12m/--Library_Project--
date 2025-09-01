@@ -1,3 +1,5 @@
+package BookMangment;
+
 import java.time.LocalDateTime;
 
 public class Book {
@@ -33,7 +35,7 @@ public class Book {
         return dateTime;
     }
 
-    private void setDateTime(LocalDateTime dateTime) {
+    private final void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
     }
 
@@ -68,16 +70,17 @@ public class Book {
         this.dateTime = LocalDateTime.now();
     }
 
-    void setBook(String serialNUmb, String bookTitle, String author) {
+     protected void setBook(String serialNUmb, String bookTitle, String author) {
         this.serialNUmb = serialNUmb;
         this.bookTitle = bookTitle;
         this.author = author;
         this.dateTime = LocalDateTime.now();
+
     }
 
     @Override
     public String toString() {
-        return "Book{ " +
+        return "BookMangment.Book{ " +
                 " dateTime=" + dateTime +
                 ", serialNUmb='" + serialNUmb + '\'' +
                 ", bookTitle='" + bookTitle + '\'' +
