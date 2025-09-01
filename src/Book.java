@@ -1,9 +1,9 @@
 import java.time.LocalDateTime;
 
-public abstract class Book {
+public class Book {
     LocalDateTime dateTime = LocalDateTime.now();
 
-    final String serialNUmb;
+    String serialNUmb;
     String bookTitle;
     String author;
 
@@ -12,6 +12,53 @@ public abstract class Book {
         this.bookTitle = bookTitle;
         this.author = author;
         this.dateTime = LocalDateTime.now();
+    }
+
+    Book() {
+        this.serialNUmb = null;
+        this.bookTitle = null;
+        this.author = null;
+        this.dateTime = LocalDateTime.now();
+    }
+
+    public void DetailsBook() {
+        System.out.println(" Serial Numb = " + serialNUmb);
+        System.out.println(" Author name = " + author);
+        System.out.println("bookTitle = " + bookTitle);
+        System.out.println("book information");
 
     }
+
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    private void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+    }
+
+    public String getSerialNUmb() {
+        return serialNUmb;
+    }
+
+    void setSerialNUmb(String serialNUmb) {
+        this.serialNUmb = serialNUmb;
+    }
+
+    public String getBookTitle() {
+        return bookTitle;
+    }
+
+    void setBookTitle(String bookTitle) {
+        this.bookTitle = bookTitle;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    void setAuthor(String author) {
+        this.author = author;
+    }
+
 }
