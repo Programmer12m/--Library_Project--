@@ -70,21 +70,21 @@ public class Book {
         this.dateTime = LocalDateTime.now();
     }
 
-     protected void setBook(String serialNUmb, String bookTitle, String author) {
-        this.serialNUmb = serialNUmb;
-        this.bookTitle = bookTitle;
-        this.author = author;
-        this.dateTime = LocalDateTime.now();
-
-    }
+//     protected void setBook(String serialNUmb, String bookTitle, String author) {
+//        this.serialNUmb = serialNUmb;
+//        this.bookTitle = bookTitle;
+//        this.author = author;
+//        this.dateTime = LocalDateTime.now();
+//
+//    }
 
     @Override
     public String toString() {
         return "BookMangment.Book{ " +
-                " dateTime=" + dateTime +
-                ", serialNUmb='" + serialNUmb + '\'' +
-                ", bookTitle='" + bookTitle + '\'' +
-                ", author='" + author + '\'' +
-                '}';
+                " dateTime= " + dateTime +
+                ", serialNUmb= '" + serialNUmb + '\'' +
+                ", bookTitle= '" + bookTitle + '\'' +
+                ", author= '" + author + '\'' +
+                " }";
     }
 }
