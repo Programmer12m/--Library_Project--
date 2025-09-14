@@ -7,11 +7,13 @@ class AddBook extends Book {
     Scanner sc = new Scanner(System.in);
     protected int numOfBooks = 0;
     int area;
-    String bookStore[];
+    String[] bookStore;
+
     protected void setArea(int area) {
         this.area = area;
-      this.bookStore =new String[area];// multiple area variables are used so that why we use this and put it in brackets
+        this.bookStore = new String[area];// multiple area variables are used so that why we use this and put it in brackets
     }
+
     protected void setBook(String serialNUmb, String bookTitle, String author) {
         this.serialNUmb = serialNUmb;
         this.bookTitle = bookTitle;
@@ -25,8 +27,29 @@ class AddBook extends Book {
                                                 is zero and it will increase will each iteration*/
         } else
             System.out.println(" area is full can't add!");
-        return;
     }
+              // this code is underdevelpment
+
+
+//    void deleteBook(String bookTitle, String serialNumber) {
+//        if (numOfBooks == 0) {
+//            System.out.println("nothing is left");
+//            return;
+//        } else {
+//            System.out.println("deleting book record");
+//            super.bookTitle = null;
+//            super.serialNUmb = null;
+//            super.numOfBooks = -1;
+//            for (int i = 0; i <= bookStore.length; i++) {
+//                if (bookStore[i] == bookTitle) {
+//                    bookTitle = null;
+//                    System.out.println("done");
+//                    return;
+//                }
+//            }
+//
+//        }
+//    }
 
     public String showStoreBooks() {// we made method for calling for
         for (String x : bookStore) {
@@ -35,4 +58,10 @@ class AddBook extends Book {
         return "";
     }
 
+}
+
+class DeleteBook extends AddBook {
+//    protected void deleteBook(String bookTitle, String serialNumber) {
+//
+//    }
 }

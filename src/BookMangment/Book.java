@@ -3,6 +3,7 @@ package BookMangment;
 import java.time.LocalDateTime;
 
 public class Book {
+     int numOfBooks;
     LocalDateTime dateTime = LocalDateTime.now();
 
     String serialNUmb;
@@ -16,7 +17,7 @@ public class Book {
         this.dateTime = LocalDateTime.now();
     }
 
-    Book() {
+    public Book() {
         this.serialNUmb = null;
         this.bookTitle = null;
         this.author = null;
